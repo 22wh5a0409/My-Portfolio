@@ -1,3 +1,4 @@
+```jsx
 function Certifications() {
   const cardStyle = {
     background:
@@ -32,6 +33,13 @@ function Certifications() {
       org: "Industry Program",
       date: "2025 - 2026",
       desc: "Banking, finance, and professional skill development.",
+    },
+    {
+      title: "Cisco Network Support and Security",
+      org: "Cisco",
+      date: "Aug 2026",
+      desc: "Network support, security fundamentals, and troubleshooting concepts.",
+      link: "/certificates/Cisco-Network-Support-and-Security.pdf",
     },
   ];
 
@@ -131,16 +139,32 @@ function Certifications() {
                 {item.desc}
               </p>
 
-              <div
-                style={{
-                  marginTop: "20px",
-                  color: "#22d3ee",
-                  fontWeight: 700,
-                  fontSize: "14px",
-                }}
-              >
-               
-              </div>
+              {item.link && (
+                <div
+                  style={{
+                    marginTop: "20px",
+                  }}
+                >
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      color: "#22d3ee",
+                      fontWeight: 700,
+                      fontSize: "14px",
+                      textDecoration: "none",
+                      padding: "8px 14px",
+                      border: "1px solid rgba(34, 211, 238, 0.35)",
+                      borderRadius: "8px",
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    View Certificate →
+                  </a>
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -150,3 +174,4 @@ function Certifications() {
 }
 
 export default Certifications;
+```
