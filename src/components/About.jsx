@@ -111,7 +111,7 @@ function About() {
                 textAlign: "center",
               }}
             >
-              <h2 style={{ color: "#06b6d4", margin: 0 }}>2026</h2>
+              <h2 style={{ color: "#06b6d4", margin: 0 }}>2025</h2>
               <p>Graduate</p>
             </div>
           </div>
