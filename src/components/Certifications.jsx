@@ -1,4 +1,3 @@
-```jsx
 function Certifications() {
   const cardStyle = {
     background:
@@ -174,4 +173,3 @@ function Certifications() {
 }
 
 export default Certifications;
-```
