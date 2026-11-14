@@ -124,7 +124,7 @@ function Education() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  2022 - 2026
+                  2022 - 2025
                 </div>
               </div>
             </div>
