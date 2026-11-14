@@ -1,80 +1,266 @@
 
-/* =====================================
-   COMPACT CERTIFICATIONS - DESKTOP
-===================================== */
+/* ================================
+   CERTIFICATIONS SECTION
+================================ */
 
-@media (min-width: 1101px) {
+.certifications {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 7.5% 80px;
+  background: #081225;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.certifications-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.certifications .section-title {
+  font-size: clamp(48px, 5vw, 80px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #ffffff;
+  margin: 0 0 35px;
+  line-height: 1.2;
+}
+
+.certifications .section-title span {
+  color: #20cce5;
+}
+
+/* ================================
+   CERTIFICATION GRID
+================================ */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+/* ================================
+   CERTIFICATE CARD
+================================ */
+
+.certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 273px;
+  padding: 29px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #111d35,
+    #0d172c
+  );
+
+  border: 1px solid rgba(32, 204, 229, 0.20);
+  border-radius: 26px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #20cce5;
+
+  box-shadow: 0 18px 40px rgba(32, 204, 229, 0.12);
+}
+
+/* ================================
+   ISSUER AND DATE
+================================ */
+
+.certificate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.certificate-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certificate-issuer {
+  color: #aeb8c9;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.certificate-date {
+  color: #929db0;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ================================
+   CHECK ICON
+================================ */
+
+.certificate-check {
+  width: 51px;
+  height: 51px;
+  min-width: 51px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #20cce5;
+  color: #081225;
+
+  border-radius: 17px;
+
+  font-size: 27px;
+  font-weight: 600;
+}
+
+/* ================================
+   CERTIFICATE CONTENT
+================================ */
+
+.certificate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.certificate-content h3 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.25;
+
+  margin: 0 0 17px;
+}
+
+.certificate-description {
+  color: #b5bdcb;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* ================================
+   VIEW CERTIFICATE LINK
+================================ */
+
+.view-certificate {
+  display: inline-block;
+
+  color: #20cce5;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+  margin-top: 18px;
+
+  opacity: 0;
+  transform: translateY(5px);
+
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+}
+
+.certificate-card:hover .view-certificate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-certificate:hover {
+  color: #ffffff;
+}
+
+/* ================================
+   TABLET RESPONSIVENESS
+================================ */
+
+@media (max-width: 1100px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
 
   .certifications {
-    min-height: calc(100vh - 100px);
-    padding: 15px 7.5% 25px;
+    padding: 40px 5%;
   }
 
-  .certifications-container {
-    max-width: 1500px;
-  }
-
-  /* Smaller heading */
-  .certifications .section-title {
-    font-size: 58px;
-    margin-bottom: 22px;
-    line-height: 1.1;
-  }
-
-  /* Four cards in first row */
-  .certifications-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px 24px;
-  }
-
-  /* Reduce card height and padding */
-  .certificate-card {
-    min-height: 215px;
-    height: 215px;
-    padding: 20px;
-    border-radius: 22px;
-  }
-
-  /* Issuer and date */
-  .certificate-header {
-    margin-bottom: 13px;
-    gap: 8px;
-  }
-
-  .certificate-issuer {
-    font-size: 14px;
-  }
-
-  .certificate-date {
-    font-size: 13px;
-  }
-
-  /* Smaller check icon */
-  .certificate-check {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    border-radius: 14px;
+  .certificate-content h3 {
     font-size: 23px;
   }
+}
 
-  /* Certificate title */
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 600px) {
+  .certifications {
+    padding: 35px 20px 60px;
+  }
+
+  .certifications .section-title {
+    font-size: 45px;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .certificate-card {
+    min-height: 250px;
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .certificate-check {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 14px;
+    font-size: 24px;
+  }
+
   .certificate-content h3 {
-    font-size: 20px;
-    line-height: 1.25;
-    margin-bottom: 10px;
+    font-size: 22px;
   }
 
-  /* Certificate description */
   .certificate-description {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 16px;
   }
 
-  /* View link */
   .view-certificate {
-    font-size: 12px;
-    margin-top: 10px;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
